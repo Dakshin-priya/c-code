@@ -55,6 +55,7 @@ Inverted left star triangle:
 * * * * 
 * * * 
 * * 
+*
 
  */
 void invertedLeftStar(int n) {
