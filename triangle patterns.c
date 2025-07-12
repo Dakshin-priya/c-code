@@ -109,20 +109,17 @@ Pascal’s triangle:
    
  */
 void pascal(int n) {
-    int width = 4;                // 4 works up to 999; tweak if needed
+   for (int i = 0; i < n; ++i) {
+        for (int s = 0; s < n - i - 1; ++s)
+            printf("  ");  // Print leading spaces
 
-    for (int i = 0; i < n; ++i) {
-        /* leading spaces = half the width of one entry × rows still “above” */
-        int indent = (n - i - 1) * width / 2;
-        for (int s = 0; s < indent; ++s) putchar(' ');
-
-        /* print the i‑th row (i + 1 numbers) */
         int val = 1;
         for (int j = 0; j <= i; ++j) {
-            printf("%*d", width, val);          // right‑align inside the field
-            val = val * (i - j) / (j + 1);      // next C(i, j)
+            printf("%4d", val);  // Print the number in 4-char width
+            val = val * (i - j) / (j + 1);
         }
-        putchar('\n');
+
+        printf("\n");  // Use printf instead of putchar
     }
 }
 
