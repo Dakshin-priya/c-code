@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <math.h>
-
 void printFactors(int n) {
     printf("Factors of %d are:\n", n);
     // First print all smaller divisors and their pair
