@@ -3,7 +3,6 @@
 
 void printFactors(int n) {
     printf("Factors of %d are:\n", n);
-
     // First print all smaller divisors and their pair
     for (int i = 1; i <= sqrt(n); i++) {
         if (n % i == 0) {
